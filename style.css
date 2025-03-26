@@ -207,7 +207,7 @@ body{
 
     }
     #header .logo{
-        width: 45px;
+        width: 50px;
         display: flex;
         align-items: center;
     }
@@ -250,30 +250,56 @@ body{
     .mobile-nav .move{
         position: absolute;
         animation: moveMobile 1.5s;
+        transition: all 0.3 ease-in-out;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        top: -10%;
+        height: 100%;
     }
     #container .title{
-        display: none;
+        /* display: none; */
+    }
+    #container .sun{
+        height: 90px;
+        width: 90px;
+    }
+    #container .title img{
+        height: 16px;
     }
     .mountain{
-        max-height: 940px;
-        height: 940px;
+        /* max-height: 940px; */
+        height: 695px;
         overflow: hidden;
     }
     .mountain img{
         display: block;
         object-fit: cover;
     }
-    
+    .mountain .road{
+        width: 440px;
+        height: 440px;
+        top: 4%;
+        left: 8px;
+        transform: unset;
+        transition: all linear 0.3s;
+    }
     #road1{
-        display: none !important;
+        display: flex;
+        animation: unset;
     }
     #road2{
-        display: none !important;
+        display: flex;
+        animation: unset;
+    }
+    #container .sun{
+        transform: translateX(-48%);
     }
 }
 @keyframes moveMobile {
     from {top: 1000px;}
-    to {top: 50%; transform: translateY(-50%);}
+    to {top: -10%;}
 
 }
 @keyframes moveHeaderM {

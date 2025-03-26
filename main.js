@@ -1,12 +1,11 @@
-function showMenu() {
-    const nav = document.getElementById("mobile-nav")
-    if (nav.style.display === "flex") {
-      nav.style.display = "none";
-    } else {
-      nav.style.display = "flex";
-    }
+
+function openNav() {
+  document.getElementById("mobile-nav").style.display = "flex";
 }
 
+function closeNav() {
+  document.getElementById("mobile-nav").style.display = "none";
+}
 setTimeout(() => {
   document.getElementById('road1').style.display = "none";
   document.getElementById('road2').style.display = "flex";
