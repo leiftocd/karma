@@ -42,12 +42,12 @@ body{
     display: flex;
     align-items: center;
     color: #FFFFFF;
-    justify-content: space-around;
-    gap: 20px;
+    justify-content: flex-end;
+    gap: 50px;
     font-size: 20px;
     line-height: 100%;
     font-weight: 500;
-    width: 15%;
+    max-width: 50%;
     position: relative;
     animation: moveHeader 1.5s;
     cursor: pointer;
@@ -103,8 +103,8 @@ body{
 .mountain .road{
     position: absolute;
     top: 36%;
-    left: 51%;
-    transform: translate(-50%, -50%);
+    left: 50%;
+    transform: translate(-49%, -50%);
 }
 .mountain .road span{
     position: absolute;
@@ -143,9 +143,6 @@ body{
     html{
         font-size: 95%;
     }
-    #header .nav{
-        width: 20%;
-    }
     .mountain .road{
         top: 35%;
     }
@@ -154,9 +151,6 @@ body{
     html{
         font-size: 85%;
     }
-    #header .nav{
-        width: 25%;
-    }
     #header .logo {
         padding-top: 10px;
     }
@@ -164,9 +158,6 @@ body{
 @media (max-width: 768px) {
     html{
         font-size: 70%;
-    }
-    #header .nav{
-        width: 35%;
     }
     .mountain {
         max-height: 695px;
@@ -281,7 +272,7 @@ body{
         width: 440px;
         height: 440px;
         top: 4%;
-        left: -8%;
+        left: 0%;
         transform: unset;
         transition: all linear 0.3s;
     }
