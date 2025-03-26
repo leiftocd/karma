@@ -260,6 +260,8 @@ body{
     }
     .mountain .road{
         width: 440px;
+        height: 440px;
+        top: 35%;
     }
     #road2 {
         width: 100%;
