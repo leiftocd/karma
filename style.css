@@ -266,7 +266,7 @@ body{
         width: 90px;
     }
     #container .title img{
-        height: 16px;
+        height: 15px;
     }
     .mountain{
         /* max-height: 940px; */
@@ -281,7 +281,7 @@ body{
         width: 440px;
         height: 440px;
         top: 4%;
-        left: 8px;
+        left: -8%;
         transform: unset;
         transition: all linear 0.3s;
     }
