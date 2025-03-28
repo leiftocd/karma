@@ -11,5 +11,4 @@ document.getElementById("lang-switch").addEventListener("change", function () {
       cnContent.classList.remove("hidden");
   }
 });
-
 document.getElementById("lang-switch").dispatchEvent(new Event("change"));
