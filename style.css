@@ -13,7 +13,7 @@ body{
     min-height: 100vh;
     position: relative;
 }
-.moutain-container{
+.mountain-container{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -322,7 +322,7 @@ tr:nth-child(even) {
     }
 }
 @media (max-width: 450px) {
-    .moutain-container {
+    .mountain-container {
         padding: 30px 0;
     }
     .karma-content h1{
@@ -443,7 +443,7 @@ tr:nth-child(even) {
     }
     .karma-content{
         top: 90%;
-        padding: 0 18px 0 18px;
+        padding: 0 18px 20px 18px;
     }
     .karma-content_img{
         width: 100%;
