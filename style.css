@@ -198,9 +198,9 @@ tr:nth-child(even) {
 }
 .mountain .road{
     position: absolute;
-    top: 36%;
+    top: 4%;
     left: 50%;
-    transform: translate(-49%, -50%);
+    transform: translate(-49%, 0);
 }
 .mountain .road span{
     position: absolute;
@@ -241,7 +241,6 @@ tr:nth-child(even) {
 }
 @media (max-width: 1440px){
     .mountain .road{
-        top: 37%;
         left: 51%;
         width: 900px;
     }
@@ -254,7 +253,6 @@ tr:nth-child(even) {
         padding-top: 10px;
     }
     .mountain .road{
-        top: 37%;
         left: 51%;
         width: 650px;
     }
@@ -272,9 +270,7 @@ tr:nth-child(even) {
     }
 }
 @media (max-width: 990px){
-    .mountain .road{
-        top: 40%;
-    }
+
 }
 @media (max-width: 768px) {
     #container .title{
@@ -297,8 +293,7 @@ tr:nth-child(even) {
     .mountain .road{
         height: 480px;
         width: 600px;
-        top: 43%;
-        left: 50%;
+        left: 51%;
     }
     .mountain .road span{
         left: 15%;
@@ -416,7 +411,6 @@ tr:nth-child(even) {
     .mountain .road{
         width: 450px;
         height: 430px;
-        top: 35%;
     }
     #road2 {
         width: 100%;
