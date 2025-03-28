@@ -59,6 +59,13 @@ body{
 .karma-content ul li{
     display: flex;
     gap: 10px;
+    font-size: 20px;
+}
+.karma-content ul {
+    font-size: 20px;
+}
+#karma-content_en p{
+    font-size: 20px;
 }
 table {
     border: 1px solid black;
@@ -298,6 +305,9 @@ tr:nth-child(even) {
     .mountain-container {
         padding: 15px 0;
     }
+    .karma-content{
+        gap: 10px;
+    }
     .karma-content h1{
         font-size: 36px;
     }
@@ -306,6 +316,15 @@ tr:nth-child(even) {
     }
     .karma-content p{
         font-size: 14px;
+    }
+    #karma-content_en p{
+        font-size: 18px;
+    }
+    .karma-content ul {
+        font-size: 18px;
+    }
+    #karma-content_en ul li{
+        font-size: 18px;
     }
     #header{
         height: 55px;
