@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap'); */
 @import url('https://fonts.cdnfonts.com/css/aceh');
 *{
     padding: 0;
@@ -6,7 +6,9 @@
     margin: 0;
 }
 html{
-    font-family: Poppins;
+    /* font-family: Poppins; */
+    font-family: 'Aceh', sans-serif;
+
 
 }
 body{
@@ -32,7 +34,6 @@ body{
     padding: 0 100px 60px 100px;
     position: absolute;
     top: 90%;
-
 }
 .karma-content h1{
     font-size: 40px;
@@ -113,11 +114,9 @@ tr:nth-child(even) {
     align-items: center;
     color: #FFFFFF;
     justify-content: flex-end;
-    gap: 50px;
     font-size: 20px;
     line-height: 100%;
     font-weight: 500;
-    max-width: 50%;
     position: relative;
     animation: moveHeader 1.5s;
     cursor: pointer;
@@ -323,7 +322,7 @@ tr:nth-child(even) {
 }
 @media (max-width: 450px) {
     .mountain-container {
-        padding: 30px 0;
+        padding: 15px 0;
     }
     .karma-content h1{
         font-size: 36px;
@@ -343,6 +342,7 @@ tr:nth-child(even) {
         width: 50px;
         display: flex;
         align-items: center;
+        padding-top: 0;
     }
     #header .nav .nav-language{
         width: 100%;
@@ -351,6 +351,8 @@ tr:nth-child(even) {
     #header .nav .nav-language form #lang-switch{
         padding: 0;
         font-size: 12px;
+        width: 100%;
+        opacity: .8;
     }
     
     #header .mobile-menu{
@@ -416,6 +418,7 @@ tr:nth-child(even) {
     .mountain{
         height: 695px;
         overflow: hidden;
+        margin-top: 20px;
     }
     .mountain img{
         display: block;
@@ -452,6 +455,9 @@ tr:nth-child(even) {
     table{
         margin-bottom: 20px;
         font-size: 50%;
+    }
+    #container{
+        margin-top: 35px;
     }
 }
 @keyframes moveHeader {
