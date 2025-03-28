@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/aceh');
 *{
     padding: 0;
     box-sizing: border-box;
@@ -9,30 +10,99 @@ html{
 
 }
 body{
-    background-image: url("./image/background.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     min-height: 100vh;
     position: relative;
-    overflow: hidden;
 }
+.moutain-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 60px 0;
+}
+.karma-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 100px 60px 100px;
+    position: absolute;
+    top: 90%;
 
+}
+.karma-content h1{
+    font-size: 40px;
+    font-weight: 700;
+}
+.karma-content > span{
+    width: 100%;
+    font-weight: 600;
+    font-size: 28px;
+}
+.karma-content p{
+    width: 100%;
+}
+.karma-content ul{
+    width: 100%;
+}
+.karma-content_img{
+    width: 50%;
+    height: 50%;
+    margin: 50px 0;
+}
+.karma-content_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.karma-content ul li{
+    display: flex;
+    gap: 10px;
+}
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 320px;
+    right: 0;
+    z-index: -1;
+}
+.bg img{
+    width: 100%;
+    height: 100%;
+}
 #header{
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     height: 60px;
-    padding: 40px 40px 0 40px;
+    padding: 0 40px;
     position: relative;
 }
 #header .logo{
     width: 105px;
     height: 80px;
-    padding-top: 40px;
     position: relative;
     animation: moveHeader 1.5s;
+    cursor: pointer;
+
 }
 #header .logo img{
     object-fit: cover;
@@ -51,7 +121,33 @@ body{
     position: relative;
     animation: moveHeader 1.5s;
     cursor: pointer;
-
+}
+#header .nav .nav-whitepaper{
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    width: 300px;
+    height: 50px;
+}
+#header .nav .nav-language{
+    background-color: #FFFFFF;
+    width: 80px;
+    height: 50px;
+    color: #000;
+    border-radius: 15px;
+}
+#header .nav .nav-language form{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+#header .nav .nav-language form #lang-switch{
+    border: none;
+    border-radius: 15px;
+    height: 100%;
+    cursor: pointer;
+    padding: 0 10px;
+    outline: none;
+    font-size: 16px;
 }
 #header .mobile-menu{
     display: none;
@@ -67,13 +163,23 @@ body{
     display: flex;
     align-items: center;
     position: relative;
+    justify-content: center;
     margin-top: 70px;
     animation: moveContainer 1.5s;
 }
 #container .title{
-    text-align: center;
-    width: 100%;
-    
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    span{
+        letter-spacing: 5px;
+        font-size: 50px;
+        font-weight: 700;
+        color: #FFFFFF;
+        font-family: 'Aceh', sans-serif;
+                                                
+    }
 }
 #container .sun{
     width: 143px;
@@ -113,12 +219,6 @@ body{
     font-weight: 700;
     filter: drop-shadow(2px 4px 6px rgb(6, 79, 104));
 }
-.mountain .road img{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    
-}
 #road1 {
     display: flex;
     opacity: 1;
@@ -137,39 +237,78 @@ body{
     bottom: 0;
     animation: fadeIn2 2s forwards ease-in-out;
 }
+.karma-content{
+    width: 100%;
+    display: flex;
+}
+.karma-content p{
+    color: #000;
+}
+.hidden{
+    display: none;
+}
 @media (max-width: 1440px){
-    html{
-        font-size: 95%;
-    }
     .mountain .road{
-        top: 35%;
+        top: 37%;
+        left: 51%;
+        width: 900px;
+    }
+
+    #container .title{
+        gap: 5rem;
+
     }
 }
 @media (max-width: 1028px) {
-    html{
-        font-size: 85%;
-    }
     #header .logo {
         padding-top: 10px;
     }
+    .mountain .road{
+        top: 37%;
+        left: 51%;
+        width: 650px;
+    }
+    #container .title{
+        width: 65%;
+        span{
+            letter-spacing: 4px;
+            font-size: 36px;
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+    }
+    .bg{
+        bottom: 25%;
+    }
+}
+@media (max-width: 990px){
+    .mountain .road{
+        top: 40%;
+    }
 }
 @media (max-width: 768px) {
-    html{
-        font-size: 70%;
+    #container .title{
+        width: 70%;
+        span{
+            letter-spacing: 4px;
+            font-size: 32px;
+            font-weight: 700;
+            color: #FFFFFF;
+        }
     }
     .mountain {
         max-height: 695px;
-        height: 600px;
+        height: 695px;
     }
     .mountain img{
         display: block;
         object-fit: cover;
     }
     .mountain .road{
-        height: 520px;
-        width: 768px;
-        top: 42%;
-        left: 52%;
+        height: 480px;
+        width: 600px;
+        top: 43%;
+        left: 50%;
     }
     .mountain .road span{
         left: 15%;
@@ -182,9 +321,18 @@ body{
         width: 120px;
     }
 }
-@media (max-width: 440px) {
-    html{
-        font-size: 70%;
+@media (max-width: 450px) {
+    .moutain-container {
+        padding: 30px 0;
+    }
+    .karma-content h1{
+        font-size: 36px;
+    }
+    .karma-content span{
+        font-size: 20px;
+    }
+    .karma-content p{
+        font-size: 14px;
     }
     #header{
         height: 55px;
@@ -196,9 +344,15 @@ body{
         display: flex;
         align-items: center;
     }
-    #header .nav{
-        display: none;
+    #header .nav .nav-language{
+        width: 100%;
+        height: 40px;
     }
+    #header .nav .nav-language form #lang-switch{
+        padding: 0;
+        font-size: 12px;
+    }
+    
     #header .mobile-menu{
         display: flex;
         align-items: center;
@@ -212,6 +366,16 @@ body{
     #header .mobile-menu svg path{
         fill: #FFFFFF
     }
+    #container .title{
+        width: 100%;
+        gap: 5rem;
+        span{
+            letter-spacing: 3px;
+            font-size: 28px;
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+    }
     .mobile-nav{
         display: none;
         flex-direction: column;
@@ -221,9 +385,8 @@ body{
         left: 0;
         right: 0;
         top: 0;
-        bottom: 0;
+        bottom: 20%;
         width: 100%;
-        height: 100%;
         background-color: #000;
         z-index: 100;
         opacity: 0.7;
@@ -259,8 +422,8 @@ body{
         object-fit: cover;
     }
     .mountain .road{
-        width: 440px;
-        height: 440px;
+        width: 450px;
+        height: 430px;
         top: 35%;
     }
     #road2 {
@@ -277,6 +440,18 @@ body{
     }
     #container .sun{
         transform: translateX(-48%);
+    }
+    .karma-content{
+        top: 90%;
+        padding: 0 18px 0 18px;
+    }
+    .karma-content_img{
+        width: 100%;
+        margin: 20px 0;
+    }
+    table{
+        margin-bottom: 20px;
+        font-size: 50%;
     }
 }
 @keyframes moveHeader {

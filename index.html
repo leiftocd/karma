@@ -7,52 +7,683 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div id="header">
-        <div class="logo">
-            <img src="./image/logo.png" alt="karma">
+    <section class="moutain-container">
+        <div class="bg">
+            <img src="./image/background.png" alt="" loading="lazy">
         </div>
-        <div class="nav">
-            <div class="nav-language">
-                Language
+        <div id="header">
+            <div class="logo">
+                <img src="./image/logo.png" alt="karma" loading="lazy">
             </div>
-            <div class="nav-whitepaper">
-                Whitepaper
+            <div class="nav">
+                <!-- <div class="nav-whitepaper">
+                </div> -->
+                <div class="nav-language">
+                    <form>
+                        <select id="lang-switch">
+                            <option value="en">ENG</option>
+                            <option value="cn" selected>汉语</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <!-- <a href="javascript:void(0);" id="mobile-menu"  class="mobile-menu" onclick="openNav()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"/></svg>
+            </a> -->
+        </div>
+        <!-- <div class="mobile-nav" id="mobile-nav" onclick="closeNav()">
+            <div class="move">
+                <div class="nav-language">
+                    Language
+                </div>
+                <div class="nav-whitepaper">Whitepaper
+                </div>
+            </div>
+        </div> -->
+        <div id="container">
+            <div class="title">
+                <span>KARMA</span>
+                <span>TODAY</span>
+            </div>
+            <div class="sun">
+                <img src="./image/Sun.png" alt="sun" loading="lazy">
             </div>
         </div>
-        <a href="javascript:void(0);" id="mobile-menu"  class="mobile-menu" onclick="openNav()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"/></svg>
-        </a>
-    </div>
-    <div class="mobile-nav" id="mobile-nav" onclick="closeNav()">
-        <div class="move">
-            <div class="nav-language">
-                Language
-            </div>
-            <div class="nav-whitepaper">
-                Whitepaper
+        <div class="mountain">
+            <img src="./image/mountain.png" alt="mountain" loading="lazy">
+            <div class="road">
+                <div class="road1">
+                    <img src="./image/road-1.svg" id="road1" alt="road" loading="lazy">
+                </div>
+                <div class="road2">
+                    <img src="./image/road-2.svg" id="road2" alt="road" loading="lazy">
+                </div>
+                <span id="span">0%</span>
             </div>
         </div>
-    </div>
-    <div id="container">
-        <div class="title">
-            <img src="./image/KARMA      TODAY.png" alt="">
+    </section>
+    <section class="karma-content" id="karma-content_cn">
+        <h1>
+            Karma ⽩⽪书
+        </h1>
+        <span>
+            Karma的词义
+        </span>
+        <p>
+            Karma 的概念源⾃因果法则，强调善⾏带来积极影响，恶⾏可能导致负⾯后果。这⼀思想最
+            早起源于印度哲学，认为⼈的⾏为不仅影响当下，还可能塑造未来
+        </p>
+        <p>
+            在现代社会，karma 这⼀词汇被⼴泛使⽤，不仅象征着⾏为带来的回馈，也常⽤于社交平
+            台，作为衡量⽤户贡献和互动的⼀种⽅式。⽆论是在哲学、道德，还是⽇常⽣活中，karma 
+            都提醒⼈们：你的每⼀次善⾏，都可能影响世界，也可能影响你⾃⼰。
+        </p>
+        <span>
+            Karma 币——善⾏的象征
+        </span>
+        <p>
+            Karma 币是⼀种⽤于记录和象征善⾏的⾮⾦融性数字资产，它承载着“善⾏值得被认可”的理
+            念。我们希望，每⼀份善意都能被看见，每⼀位⾏善者都能被激励，从⽽⿎励更多⼈投⾝公
+            益。
+        </p>
+        <p>
+            然⽽，全球每天都在发⽣⽆数善⾏，从帮助弱势群体到⽀持社区发展，这些⾏为往往难以量
+            化和记录。Karma 采⽤了创新的 Mint 机制和社区奖励体系，使其成为善⾏的象征，⽽⾮交
+            易⼯具，从⽽保持其纯粹的公益属性，与“karma”的原始意义保持⼀致。
+        </p>
+        <span>
+            Karma 币的Mint机制
+        </span>
+        <p>
+            Karma 币是⼀种⽤于记录善⾏的⾮⾦融性数字资产，所有 Karma 币的铸造（Mint）都直接源
+            于公益⾏为，确保其与“善⾏”概念保持⼀致。Karma 没有预挖（Pre-mine），也不⽀持任何
+            形式的付费铸造（Minting）。 唯⼀的⽅式是通过公益捐赠，从⽽形成⼀个去中⼼化的、透
+            明的善⾏记录系统。
+        </p>
+        <p>
+            为什么选择捐赠作为 Mint 机制？
+            捐赠⾏为被选定为 Karma 的 Mint 触发条件，主要基于以下因素：
+        </p>
+        <ul>
+            <li>
+                <span>1.</span>易于界定：捐赠⾏为通常是明确的、可验证的，便于追踪和记录。
+            </li>
+            <li>
+                <span>2.</span>可量化：捐款⾦额可以作为衡量标准，使 Mint 机制具备⼀定的公允性。
+            </li>
+            <li>
+                <span>3.</span>具有传播效应：慈善捐赠通常会受到媒体、社区和公众的关注，有助于扩⼤公益影响
+                ⼒。
+            </li>
+        </ul>
+
+        <span>
+            全球慈善捐赠现状
+        </span>
+        <p>
+            根据2022 年美国慈善捐赠统计，全年慈善捐赠总额达到4,993 亿美元，具体分布如下：
+        </p>
+        <p>• 宗教：占⽐约28%</p>
+        <p>• 教育：占⽐约14%</p>
+        <p>• ⼈类服务：占⽐约13%</p>
+        <p>• 医疗保健：占⽐约9%</p>
+        <p>• 公共社会福利：占⽐约8%</p>
+        <p>• 国际事务：占⽐约6%</p>
+        <p>• 艺术、⽂化和⼈⽂：占⽐约 5%</p>
+        <p>• 环境和动物保护：占⽐约 3%</p>
+        <p>• 其他：占⽐约14%</p>
+        <p>根据历史数据，美国的慈善捐赠通常占全球捐赠总额的40%-45%，据此估算，2022年全球
+            慈善捐赠总额约为 1.2 万亿美元。如此庞⼤的公益⾏动，不应仅停留在传统记录⽅式，⽽应
+            被更好地在区块链上永久存证，让善⾏可见，让公益更透明。
+        </p>
+        <span>Karma 的 Mint 过程</span>
+        <p>为了确保 Karma 仅⽤于记录真实的公益捐赠⾏为，团队采取了透明、公正的捐赠验证流程：</p>
+        <p>1. 取得授权：Karma 团队与募捐主办⽅或个⼈取得联系。获得捐助者、受捐者及主办⽅的同意，授权 Karma 参与此次捐款记录。</p>
+        <p>2. 见证捐款事件：捐款⾏为发⽣时，Karma团队不介⼊原流程，仅作为见证者记录捐赠⾦额，以美元现价计算。</p>
+        <p>3. 铸造Karma：Karma 团队按照路线图 以及捐赠⾦额Mint 出相应数量的 Karma 币，分配给相关参与⽅（详见后⽂）。</p>
+        <p>4. 公益传播：在募捐主办⽅正式发布捐款新闻后，Karma 团队将在公开渠道同步相关信息，提升公益⾏动的社会关注度，增强其传播效应。</p>
+        <p>这⼀机制确保了 Karma 不是“购买”或“交易”的代币，⽽是⼀种⽤于记录和象征善⾏的数字标识，强化了其公益属性，并使其远离⾦融监管风险。</p>
+        <span>Karma的发⾏总量</span>
+        <p>10亿</p>
+        <span>
+            Karma Mint 计算⽅法
+        </span>
+        <p></p>
+        <p>Karma 的 mint 分为 11 个批次，总发⾏量为 10 亿。我们采⽤了一条温柔上扬的指数曲线，来描绘⼀个机构从萌芽到崛起的过程。</p>
+        <p>曲线的起点缓慢，仿佛⼀个新⽣组织在寂静中扎根，如同细胞悄然分裂、思想缓慢酝酿，外界⼏乎⽆感。但随着时间推移，每⼀步的努⼒开始累积影响，推动曲线缓缓提速。正如阳光照进森林，藤蔓开始攀爬、枝叶逐渐舒展，影响⼒也在悄然之间，从⼀点星⽕扩散为燎原之势。</p>
+        <p>在数学上，我们使⽤指数函数 y = e^x - 1 来刻画价值的⾃然增长，并通过⾮均匀划分的⽅式定义每个批次的横轴位置：</p>
+        <p>x_i = L * (i / n)^0.83</p>
+        <p>其中，L 是总长度，n 是批次数量，i 为当前批次编号，指数 0.83 控制了批次间距的分布节奏——通过“前宽后窄”的横轴划分，有效缓和了指数函数在后期的剧烈陡升，使整体⾯积增⻓更加平滑⽽有序。</p>
+        <p>这样的设计既保证了早期批次拥有充⾜的空间与意义，也让整个系统更贴近真实世界中“积累—放⼤—扩散”的⾃然成长节奏。</p>
+        <p>在每个批次中，每单位的捐赠⾦额对应的 Karma 产出量也随着递减（难度上升）。</p>
+        <div class="karma-content_img">
+            <img src="./image/0.png" alt="" loading="lazy">
         </div>
-        <div class="sun">
-            <img src="./image/Sun.png" alt="">
+        <table border="1">
+            <tr>
+              <th>批次</th>
+              <th>Karma 对应捐赠额（USD）</th>
+              <th>mint 数⽬</th>
+              <th>批次总捐赠额（USD）</th>
+              <th>合计总捐赠⾦额（USD）</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>0.08</td>
+              <td>12,500,000</td>
+              <td>1,000,000</td>
+              <td>1,000,000</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>0.16</td>
+              <td>28,310,000</td>
+              <td>4,530,000</td>
+              <td>5,530,000</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>0.32</td>
+              <td>42,480,000</td>
+              <td>13,590,000</td>
+              <td>19,120,000</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>0.64</td>
+              <td>56,660,000</td>
+              <td>36,260,000</td>
+              <td>55,390,000</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>1.28</td>
+              <td>71,320,000</td>
+              <td>91,280,000</td>
+              <td>146,670,000</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>2.56</td>
+              <td>86,710,000</td>
+              <td>221,980,000</td>
+              <td>368,650,000</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>5.12</td>
+              <td>103,030,000</td>
+              <td>527,530,000</td>
+              <td>896,180,000</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>10.24</td>
+              <td>120,430,000</td>
+              <td>1,233,220,000</td>
+              <td>2,129,400,000</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>20.48</td>
+              <td>139,050,000</td>
+              <td>2,847,740,000</td>
+              <td>4,977,140,000</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>40.96</td>
+              <td>159,020,000</td>
+              <td>6,513,560,000</td>
+              <td>11,490,690,000</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>81.92</td>
+              <td>180,490,000</td>
+              <td>14,785,380,000</td>
+              <td>26,276,070,000</td>
+            </tr>
+        </table>
+        <p>跨批次计算：在某些情况下，单笔⼤额捐赠可能会跨越多个 Mint 批次，这种情况下，按照
+          每个批次的标准分别计算 Karma 分配，确保公平性。
+        </p>
+        <p>⽰例：</p>
+        <p>假设当前在 第 5 批次（1 Karma = $1.28） 进⾏ Mint，⽽某笔捐款⾦额较⼤，导致部分 
+            Mint 额度进⼊ 第 6 批次（1 Karma = $2.56），那么：
+        </p>
+        <p>
+            • 该笔捐款会按照第 5 批次规则计算对应部分的 Karma
+        </p>
+        <p>
+            • 超出的部分则按照第 6 批次规则计算 Mint 量
+        </p>
+        <p>Mint 难度递增的⽬的</p>
+        <p>• 确保早期参与者的激励，同时⿎励长期捐赠</p>
+        <p>• 控制供应量，避免通胀影响 Karma 的公益价值</p>
+        <p>• 通过计算透明化，避免⼈为操控 Mint 规则</p>
+        <p>这⼀模式进⼀步强化了 Karma 作为公益记录⼯具的属性，⽽⾮投机资产，从⽽降低⾦融监
+            管风险。
+        </p>
+        <span>Karma的分配</span>
+        <p>
+            Karma 仅通过Mint（铸造）这⼀单⼀机制产⽣，每次 Mint ⽣成的 Karma 都按照固定⽐例进
+            ⾏分配。这⼀规则确保Karma 只与公益⾏为挂钩，避免因⼆级市场操作或预挖机制导致不
+            公平分配。
+        </p>
+        <ul>
+            • 45% 捐赠相关⽅：
+            <li>◦ 30% 募捐者（捐款者）：公益⾏动的直接发起⼈，获得最多⽐例的 Karma 以认可其善⾏贡献。</li>
+            <li>◦ 10% 受捐者（公益项⽬或受益⼈）：赋予受捐者透明、公正的公益记录，增强公益⾏动的可信度。</li>
+            <li>◦ 5% 主办⽅（公益基⾦会或筹款平台）：推动募捐顺利进⾏并提供组织与管理服务。如没有主办⽅，该份额平均分配给募捐者与受捐者。</li>
+        </ul>
+        <p></p>
+        <ul>• 45% 平台⽀持与⽣态发展：
+            <li>◦ 25% 团队：⽤于运营、技术开发、市场推⼴等必要⽀出。</li>
+            <li>◦ 5% ⽣态建设：⽤于激励开发者、技术贡献者和社区成员，推动 Karma ⽣态持续创新。</li>
+            <li>◦ 15% 慈善基⾦：专门⽤于⽀持公益事业，资⾦使⽤完全透明并受社区治理，通过公益守护 NFT 持有者投票决定具体公益资助项⽬。</li>    
+        </ul>
+        <ul>• 10% 流动性管理：
+            <li>◦ ⽤于⽀持 Karma ⽣态的市场流通，通过例如流动性引导拍卖（LBA）等机制完成初始定价，确保 Karma 的公平进⼊市场并维持稳定流动性。</li>
+        </ul>
+        <span>慈善基⾦
+        </span>
+        <p>Karma慈善基⾦的核⼼⽬标是通过Karma作为公益激励⼯具，在更⼴泛的范围内促进善⾏。
+            基⾦运作采⽤完全透明的⽅式，所有资⾦流动和⽀出均记录在区块链上，以确保100%的透
+            明度，提升公众信任。</p>
+       
+        <ul>基⾦运作特点：
+            <li>完全透明：所有资⾦流动和交易上链，公开可查。</li>
+            <li>仅接受 Karma 捐赠：如收到⾮ Karma 资产，将⾃动兑换为 Karma 存⼊基⾦账户，确保 Karma 明确的公益定位。</li>
+            <li>去中⼼化治理模式：基⾦设⽴委员会，所有成员公开透明产⽣。委员会负责每周提出公益资助提案，每次仅可执⾏⼀个提案，未通过的提案需重新提交。</li>
+        </ul>
+        <p>公益守护NFT（Charity Guardian NFT） 是⽤于基⾦治理的关键⼯具，赋予持有者对基⾦
+            公益资助提案的投票决策权。购买NFT赋予持有者参与治理的权益。</p>
+            
+        <ul>公益守护NFT治理规则：
+            <li>每周决策投票：委员会每周提出⼀或多个公益资助提案，由公益守护 NFT 持有者在 2 天内进⾏投票。</li>
+            <li>⼀票制且不可更改：每个 NFT 针对单个议题仅可投票⼀次。</li>
+            <li>有效性标准：获得最⾼票数的提案，且票数超过 NFT 持有者总数的三分之⼀时，⽅可执⾏。</li>
+            <li>治理即善⾏：积极参与投票治理被视作善⾏，参与者有可能获得不定期的 Karma 空投奖励，但不承诺固定频率或数量，以避免产⽣⾦融属性。</li>
+        </ul>
+        <p>以上合并确保慈善基⾦和 NFT 治理机制紧密结合，并明确公益守护 NFT 的公益属性及治理功能，避免⾦融风险。</p>
+        <span>公益声誉系统</span>
+        <p>为了进⼀步激励公益⾏为，Karma 计划推出 公益声誉系统，该系统将基于 Karma 代币的贡
+            献，构建⼀个透明、公正的声誉评分机制。</p>
+        <ul>• 核⼼⽬标：
+            <li>
+                ◦ 记录长期公益贡献，给予更多⾮经济性激励。
+            </li>
+            <li>    
+                ◦ 让 Karma 代币的价值不仅限于数字资产，⽽是成为公益声誉的象征。
+            </li>
+            <li>
+                ◦ 为公益组织和个⼈提供可信赖的社会信⽤体系。
+            </li>
+        </ul>
+        <ul>
+            • 激励⽅式：
+            <li>
+                ◦ 积分体系：基于 Karma 持有和贡献⾏为，赋予声誉等级。
+            </li>
+            <li>
+                ◦ 合作权益：与公益组织、社交平台（如 LinkedIn）合作，使 Karma 声誉成为衡
+                量社会贡献的标准之⼀。
+            </li>
+            <li>
+                ◦ 专属权益：⾼ Karma 声誉值的个⼈可获得公益活动优先参与权。
+            </li>
+        </ul>
+        <span>Karma钱包</span>
+        <p>
+            Karma钱包是⼀个专门为公益⽣态设计的多功能数字资产管理⼯具，旨在实现公益领域内的
+            资⾦安全管理、⾃由交流及消费便利。
+        </p>
+        <p>功能特点</p>
+        <ul>
+            <li><strong>数字资产管理与转移：</strong>Karma钱包⽀持主流加密货币的安全存储与快速转移，使捐赠者能够更便捷地完成捐赠，受捐者更快速地接收资⾦。</li>
+            <li><strong>内置沟通功能：</strong>钱包内置安全的即时通讯⼯具，让捐赠者与受捐者可以实时交流，帮助公益⾏为更加透明和直接，增进公益双⽅的理解与互信。</li>
+            <li><strong>KYC与法币兑换：</strong>完成⾝份认证（KYC）后，⽤户可以在钱包内轻松地将持有的加密资产兑换为法币（如美元、欧元等），进⼀步增强公益资⾦的实⽤性和灵活性。</li>
+            <li><strong>借记卡⽀持消费⾏为：</strong>钱包配备虚拟和实体借记卡，⽤户可直接使⽤兑换后的法币余额进⾏线上及线下消费，扩⼤了公益资⾦的实际应⽤场景。</li>
+        </ul>
+        <p>公益应⽤场景</p>
+        <p>通过Karma钱包，捐赠者不仅能追踪⾃⼰的捐赠去向，还可与公益项⽬直接沟通，确保善款
+            ⽤途透明明确。受捐者则能更快捷地获得援助资⾦，并及时反馈资⾦使⽤情况，形成公益⽣
+            态内的良性互动。
+        </p>
+        <p>Karma钱包不仅增强了公益资⾦的流动性，也提升了公益⾏为的效率与可信度，是Karma⽣
+            态中实现"善⾏可见，回馈可证"的重要⽀撑⼯具。
+        </p>    
+        <span>
+            总结
+        </span>
+        <p>
+            Karma 构建了⼀套去中⼼化的公益激励⽣态，通过创新的 Mint 机制，确保所有 Karma 代币均来源于真实的公益捐赠⾏为，彰显公益透明、公正的理念。Karma 代币的设计有效避免了⾦融属性，专注于记录和激励善⾏。
+        </p>
+            
+        <p>
+            慈善基⾦与公益守护 NFT（Charity Guardian NFT）的结合，使基⾦的治理更加透明和民主化。通过购买 NFT，社区成员获得对公益资助项⽬的投票决策权，实现社区⾃治与公益使命的紧密结合。
+        </p>
+            
+        <p>
+            此外，Karma 钱包的推出进⼀步加强了⽣态系统的实⽤性。钱包提供了安全的数字资产管理、即时沟通、法币兑换和消费⽀付功能，显著提升了捐赠者和受捐者之间的互动与公益资⾦的实效。
+        </p>
+            
+        <p>
+            展望未来，Karma 将持续完善和扩展公益⽣态的各项功能，致⼒于建⽴⼀个透明、可信赖且⾼效的全球公益⽹络，让每⼀次善⾏都能清晰可见、每⼀份回馈都真实可证。
+        </p>
+            
+    </section>
+    <section class="karma-content" id="karma-content_en">
+        <h1>
+            Karma White Paper
+        </h1>
+        <span>
+            Meaning of Karma
+        </span>
+        <p>
+            The concept of Karma comes from the law of cause and effect, which emphasizes that good deeds bring positive effects, while bad deeds may lead to negative consequences. This idea originated from Indian philosophy, which believes that people's behavior not only affects the present, but also may shape the future.
+        </p>
+        <p>
+            In modern society, the word karma is widely used. It not only symbolizes the rewards brought by behavior, but is also often used on social platforms as a way to measure user contributions and interactions. Whether in philosophy, morality, or daily life, karma reminds people that every good deed you do may affect the world and yourself.
+        </p>
+        <span>
+            Karma Coin - A Token of Good Deeds
+        </span>
+        <p>
+            Karma coin is a non-financial digital asset used to record and symbolize good deeds. It carries the idea that "good deeds deserve recognition". We hope that every bit of kindness can be seen and every doer of good deeds can be motivated, thereby encouraging more people to invest in public welfare.
+        </p>
+        <p>
+            However, countless good deeds are happening around the world every day, from helping the disadvantaged to supporting community development, and these behaviors are often difficult to quantify and record. Karma uses an innovative Mint mechanism and community reward system to make it a symbol of good deeds rather than a trading tool, thereby maintaining its pure public welfare attributes and being consistent with the original meaning of "karma".
+        </p>
+        <span>
+            Karma Coin Mint Mechanism
+        </span>
+        <p>
+            Karma is a non-financial digital asset used to record good deeds. All Karma coins are minted directly from public welfare activities to ensure that they are consistent with the concept of "good deeds". Karma has no pre-mine and does not support any form of paid minting. The only way is through public welfare donations, thus forming a decentralized and transparent system for recording good deeds.
+        </p>
+        <p>
+            Why choose donation as the Mint mechanism?
+            Donation was chosen as Karma's Mint trigger based on the following factors:
+        </p>
+        <ul>
+            <li>
+                <span>1.</span>Easy to define: Donation behavior is usually clear and verifiable, making it easy to track and record.
+            </li>
+            <li>
+                <span>2.</span>Quantifiable: The amount of donations can be used as a measurement standard, giving the Mint mechanism a certain degree of fairness.
+            </li>
+            <li>
+                <span>3.</span>Has a dissemination effect: Charitable donations usually attract attention from the media, the community and the public, which helps to expand the impact of public welfare.
+            </li>
+        </ul>
+
+        <span>
+            Current state of global charitable giving
+        </span>
+        <p>
+            According to the 2022 U.S. charitable donation statistics, the total amount of charitable donations for the year reached US$499.3 billion, with the following distribution:
+        </p>
+        <p>• Religion: ~28%</p>         
+        <p>• Education: ~14%</p>         
+        <p>• Human Services: ~13%</p>         
+        <p>• Healthcare: ~9%</p>         
+        <p>• Public and Social Welfare: ~8%</p>         
+        <p>• International Affairs: ~6%</p>         
+        <p>• Arts, Culture, and Humanities: ~5%</p>         
+        <p>• Environmental and Animal Protection: ~3%</p>         
+        <p>• Others: ~14%</p>         
+        
+        <p>Based on historical data, the United States typically accounts for 40%-45% of global charitable donations. Accordingly, the estimated total global charitable donations in 2022 amounted to approximately 1.2 trillion USD. Such a vast philanthropic effort should not be limited to traditional record-keeping methods. Instead, it should be permanently recorded on the blockchain, ensuring visibility for good deeds and greater transparency in philanthropy.</p>
+        
+        <span>Karma's Minting Process</span>         
+        
+        <p>To ensure that Karma is solely used to record genuine charitable donations, the team follows a transparent and fair donation verification process:</p>         
+        
+        <p>1. <strong>Authorization</strong>: The Karma team contacts the fundraising organizers or individuals to obtain consent from donors, beneficiaries, and organizers, granting Karma permission to record the donation.</p>         
+        
+        <p>2. <strong>Witnessing the Donation Event</strong>: During the donation process, the Karma team does not interfere but acts as a witness, recording the donation amount in USD equivalent value.</p>         
+        
+        <p>3. <strong>Minting Karma</strong>: The Karma team mints the corresponding number of Karma tokens according to the roadmap and the donation amount, distributing them to relevant participants (see details below).</p>         
+        
+        <p>4. <strong>Public Awareness</strong>: Once the fundraising organizers officially announce the donation event, the Karma team publicly shares the relevant information, increasing social awareness and maximizing the impact of the charitable action.</p>         
+        
+        <p>This mechanism ensures that Karma is not a tradable or purchasable token but a digital symbol representing acts of kindness, reinforcing its philanthropic nature while mitigating financial regulatory risks.</p>
+        
+        <span>Karma Token Total Supply</span>         
+        
+        <p><strong>Total Supply:</strong> 1 billion</p>         
+        
+        <span>Karma Minting Method</span>         
+        
+        <p>Karma minting occurs in 11 batches, with a total issuance of 1 billion tokens. The process follows a gently rising exponential curve, symbolizing an organization’s journey from inception to growth.</p>         
+        
+        <p>At first, the curve is slow, like a newly formed organization taking root in silence, much like cells dividing quietly or ideas fermenting with little external recognition. However, as time progresses, efforts accumulate, momentum builds, and the curve gradually accelerates—similar to vines growing in sunlight, expanding their influence from a tiny spark to a wildfire.</p>         
+        
+        <p>Mathematically, we use the exponential function to model this organic value growth:</p>         
+        
+        <p>y = e^x - 1</p>         
+        
+        <p>The batch distribution along the horizontal axis is defined as:</p>         
+        
+        <p>x_i = L * (i / n)^0.83</p>         
+        
+        <p>where:</p>         
+        <ul>
+        <li>L is the total length,</li>         
+        <li>n is the number of batches,</li>         
+        <li>i is the current batch number,</li>         
+        <li>0.83 is the exponent controlling the spacing distribution.</li>         
+        </ul>
+        
+        <p>This “wide first, narrow later” distribution smooths the steep rise of the exponential curve in later phases, ensuring a balanced and orderly growth pattern.</p>         
+        
+        <p>Each batch also introduces progressively decreasing Karma output per donation unit (increasing minting difficulty), ensuring sustainable value distribution.</p>         
+        
+        <p>This design ensures that early batches have sufficient space and meaning, while the entire system aligns with the real-world rhythm of accumulation, amplification, and diffusion.</p>         
+        
+        <div class="karma-content_img">
+            <img src="./image/0.png" alt="" loading="lazy">
         </div>
-    </div>
-    <div class="mountain">
-        <img src="./image/mountain.png" alt="mountain">
-        <div class="road">
-            <div class="road1">
-                <img src="./image/road-1.svg" id="road1" alt="">
-            </div>
-            <div class="road2">
-                <img src="./image/road-2.svg" id="road2" alt="">
-            </div>
-            <span id="span">0%</span>
-        </div>
-    </div>
+        <table border="1">
+            <tr>
+                <th>Batch</th>
+                <th>Karma per Donation (USD)</th>
+                <th>Minted Amount</th>
+                <th>Batch Total Donation (USD)</th>
+                <th>Cumulative Total Donation (USD)</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0.08</td>
+                <td>12,500,000</td>
+                <td>1,000,000</td>
+                <td>1,000,000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>0.16</td>
+                <td>28,310,000</td>
+                <td>4,530,000</td>
+                <td>5,530,000</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>0.32</td>
+                <td>42,480,000</td>
+                <td>13,590,000</td>
+                <td>19,120,000</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>0.64</td>
+                <td>56,660,000</td>
+                <td>36,260,000</td>
+                <td>55,390,000</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>1.28</td>
+                <td>71,320,000</td>
+                <td>91,280,000</td>
+                <td>146,670,000</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>2.56</td>
+                <td>86,710,000</td>
+                <td>221,980,000</td>
+                <td>368,650,000</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>5.12</td>
+                <td>103,030,000</td>
+                <td>527,530,000</td>
+                <td>896,180,000</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>10.24</td>
+                <td>120,430,000</td>
+                <td>1,233,220,000</td>
+                <td>2,129,400,000</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>20.48</td>
+                <td>139,050,000</td>
+                <td>2,847,740,000</td>
+                <td>4,977,140,000</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>40.96</td>
+                <td>159,020,000</td>
+                <td>6,513,560,000</td>
+                <td>11,490,690,000</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>81.92</td>
+                <td>180,490,000</td>
+                <td>14,785,380,000</td>
+                <td>26,276,070,000</td>
+            </tr>
+        </table>
+        <p>Cross-Batch Calculation: In some cases, a single large donation may span multiple Mint batches. In such cases, Karma allocation is calculated separately based on the standards of each batch to ensure fairness.</p>
+<p>Example:</p>
+<p>Suppose the current Mint is in Batch 5 (1 Karma = $1.28), but a large donation causes part of the Mint allocation to enter Batch 6 (1 Karma = $2.56). In this case:</p>
+<p>
+    • The portion of the donation within Batch 5 will be calculated according to Batch 5 rules.
+</p>
+<p>
+    • The excess portion will be calculated according to Batch 6 Mint rules.
+</p>
+<p>Purpose of Increasing Mint Difficulty</p>
+<p>• To incentivize early participants while encouraging long-term donations.</p>
+<p>• To control supply and prevent inflation from affecting Karma's charitable value.</p>
+<p>• To ensure transparency in calculations, avoiding manipulation of Mint rules.</p>
+<p>This model further strengthens Karma’s role as a tool for charitable record-keeping rather than a speculative asset, reducing financial regulatory risks.</p>
+
+<span>Karma Allocation</span>
+<p>
+    Karma is generated solely through the Minting mechanism. Each time Karma is minted, it is distributed according to a fixed proportion. This rule ensures that Karma is tied strictly to charitable activities, avoiding unfair distribution due to secondary market operations or pre-mining mechanisms.
+</p>
+<ul>
+    • 45% Donation-Related Parties:
+    <li>◦ 30% Fundraisers (Donors): The direct initiators of charitable actions receive the largest proportion of Karma to recognize their contribution.</li>
+    <li>◦ 10% Beneficiaries (Charity Projects or Recipients): Provides recipients with a transparent and fair charity record, enhancing credibility.</li>
+    <li>◦ 5% Organizers (Charity Foundations or Fundraising Platforms): Facilitate smooth fundraising and provide organizational and management services. If no organizer is involved, this share is evenly distributed between fundraisers and beneficiaries.</li>
+</ul>
+<p></p>
+<ul>• 45% Platform Support and Ecosystem Development:
+    <li>◦ 25% Team: Used for operations, technical development, marketing, and other essential expenses.</li>
+    <li>◦ 5% Ecosystem Development: Incentivizing developers, technical contributors, and community members to drive ongoing innovation within the Karma ecosystem.</li>
+    <li>◦ 15% Charity Fund: Dedicated to supporting charitable causes. The fund’s usage is fully transparent and governed by the community, with specific charity projects decided through voting by Charity Guardian NFT holders.</li>    
+</ul>
+<ul>• 10% Liquidity Management:
+    <li>◦ Used to support the market circulation of Karma, ensuring fair market entry and stable liquidity through mechanisms such as Liquidity Bootstrapping Auctions (LBA).</li>
+</ul>
+
+<span>Charity Fund</span>
+<p>The core goal of the Karma Charity Fund is to use Karma as a tool for charitable incentives, promoting good deeds on a broader scale. The fund operates with complete transparency, with all financial transactions recorded on the blockchain to ensure 100% transparency and enhance public trust.</p>
+
+<ul>Fund Operation Features:
+    <li>Full Transparency: All financial transactions are recorded on-chain and publicly accessible.</li>
+    <li>Only Accepts Karma Donations: If non-Karma assets are received, they are automatically converted to Karma and deposited into the fund account to maintain Karma’s clear charitable positioning.</li>
+    <li>Decentralized Governance Model: A committee is established with fully transparent member selection. The committee proposes one charitable funding proposal per week, and any rejected proposals must be resubmitted.</li>
+</ul>
+<p>The Charity Guardian NFT is a key tool for fund governance, granting holders the right to vote on charitable funding proposals. Purchasing an NFT provides governance participation rights.</p>
+
+<ul>Charity Guardian NFT Governance Rules:
+    <li>Weekly Decision Voting: The committee proposes one or more funding proposals each week, with Charity Guardian NFT holders voting within two days.</li>
+    <li>One-Vote System: Each NFT can vote only once per issue, and votes cannot be changed.</li>
+    <li>Validity Criteria: The proposal with the highest number of votes, and at least one-third of total NFT holders voting, will be executed.</li>
+    <li>Governance as a Good Deed: Active participation in governance is considered a charitable act, and participants may receive occasional Karma airdrop rewards. However, there is no fixed frequency or amount to prevent financial speculation.</li>
+</ul>
+<p>The above merger ensures that the charity fund and NFT governance mechanism are closely integrated, and clarifies the public welfare attributes and governance functions of the public welfare guardian NFT to avoid financial risks. </p>
+<span>Public Welfare Reputation System</span>
+<p>In order to further incentivize public welfare behavior, Karma plans to launch a public welfare reputation system, which will build a transparent and fair reputation scoring mechanism based on the contribution of Karma tokens. </p>
+<ul>• Core goals:
+<li>
+◦ Record long-term public welfare contributions and provide more non-economic incentives.
+</li>
+<li>
+◦ Let the value of Karma tokens not only be limited to digital assets, but also become a symbol of public welfare reputation.
+</li>
+<li>
+◦ Provide a reliable social credit system for public welfare organizations and individuals.
+</li>
+</ul>
+<ul>
+• Incentives:
+<li>
+◦ Points system: Based on Karma holdings and contribution behaviors, reputation levels are awarded.
+</li>
+<li>
+◦ Cooperation rights: Cooperate with public welfare organizations and social platforms (such as LinkedIn) to make Karma reputation one of the standards for measuring social contributions.
+</li>
+<li>
+◦ Exclusive rights: Individuals with high Karma reputation values ​​can obtain priority participation in public welfare activities.
+</li>
+</ul>
+<span>Karma Wallet</span>
+<p>
+Karma Wallet is a multi-functional digital asset management tool designed specifically for the public welfare ecosystem, aiming to achieve safe management of funds, free communication and convenient consumption in the public welfare field.
+</p>
+<p>Features</p>
+<ul>
+<li><strong>Digital asset management and transfer:</strong>Karma Wallet supports the secure storage and fast transfer of mainstream cryptocurrencies, allowing donors to complete donations more conveniently and recipients to receive funds more quickly.</li>
+<li><strong>Built-in communication function:</strong>The wallet has a built-in secure instant messaging tool, allowing donors and recipients to communicate in real time, helping public welfare activities to be more transparent and direct, and enhancing understanding and mutual trust between the two parties.</li>
+<li><strong>KYC and legal currency exchange:</strong>After completing identity authentication (KYC), users can easily exchange their crypto assets for legal currency (such as US dollars, euros, etc.) in the wallet, further enhancing the practicality and flexibility of public welfare funds. </li>
+<li><strong>Debit card supports consumption behavior:</strong> The wallet is equipped with virtual and physical debit cards. Users can directly use the converted legal currency balance for online and offline consumption, expanding the actual application scenarios of public welfare funds.</li>
+</ul>
+<p>Public welfare application scenarios</p>
+<p>Through the Karma wallet, donors can not only track the destination of their donations, but also communicate directly with public welfare projects to ensure that the use of donations is transparent and clear. Donees can obtain aid funds more quickly and provide timely feedback on the use of funds, forming a benign interaction within the public welfare ecosystem.
+</p>
+<p>The Karma wallet not only enhances the liquidity of public welfare funds, but also improves the efficiency and credibility of public welfare behaviors. It is an important supporting tool for achieving "good deeds are visible and feedback can be verified" in the Karma ecosystem.
+</p>
+<span>
+Summary
+</span>
+<p>
+Karma has built a decentralized public welfare incentive ecosystem. Through the innovative Mint mechanism, it ensures that all Karma tokens are derived from real public welfare donations, highlighting the concept of transparency and fairness in public welfare. The design of Karma tokens effectively avoids financial attributes and focuses on recording and incentivizing good deeds.
+</p>
+
+<p>
+The combination of charity funds and Charity Guardian NFT makes the governance of the fund more transparent and democratic. By purchasing NFTs, community members gain voting decision-making power on public welfare funding projects, realizing a close combination of community autonomy and public welfare mission.
+</p>
+
+<p>
+In addition, the launch of the Karma wallet further enhances the practicality of the ecosystem. The wallet provides secure digital asset management, instant communication, fiat currency exchange and consumer payment functions, significantly improving the interaction between donors and recipients and the effectiveness of public welfare funds.
+</p>
+
+<p>
+Looking to the future, Karma will continue to improve and expand the functions of the public welfare ecosystem, and strive to build a transparent, trustworthy and efficient global public welfare network, so that every good deed can be clearly seen and every feedback can be verified.
+</p>
+            
+    </section>
 </body>
 <script src="./main.js">
 </script>
