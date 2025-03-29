@@ -11,6 +11,12 @@ body{
     min-height: 100vh;
     position: relative;
 }
+.strong{
+    font-weight: bold;
+}
+.pd-text{
+    padding-left: 20px;
+}
 .mountain-container{
     position: relative;
     display: flex;
@@ -302,6 +308,9 @@ tr:nth-child(even) {
     }
 }
 @media (max-width: 450px) {
+    .pd-text{
+        padding-left: 10px;
+    }
     .mountain-container {
         padding: 15px 0;
     }
