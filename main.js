@@ -19,25 +19,32 @@
     const fakeData = 10;
     
     setTimeout(() => {
-        // Attempt to fetch data from server
-        fetch('http://localhost:3000/api/number') // Replace with your actual API endpoint
+        fetch('http://localhost:3000/api/number') // Replace with actual endpoint
             .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
+                if (!response.ok) throw new Error('Network response was not ok');
                 return response.json();
             })
             .then(serverData => serverData.value !== undefined ? serverData.value : fakeData)
             .catch(error => {
                 console.error('Error fetching data:', error);
-                return fakeData; // Fallback to 100 if error occurs
+                return fakeData;
             })
             .then(data => {
                 let currentValue = 0;
                 let animationRunning = false;
     
-                const paths = document.querySelectorAll('svg path');
-                const totalPaths = paths.length; // expected to be 88
+                // Lấy SVG nào đang hiển thị
+                const svg1 = document.getElementById("svg1");
+                const svg2 = document.getElementById("svg2");
+    
+                let visibleSvgPaths;
+                if (window.getComputedStyle(svg1).display !== "none") {
+                    visibleSvgPaths = svg1.querySelectorAll("path");
+                } else {
+                    visibleSvgPaths = svg2.querySelectorAll("path");
+                }
+    
+                const totalPaths = visibleSvgPaths.length;
                 const pathsToAnimate = Math.round((data / 100) * totalPaths);
                 let count = 0;
     
@@ -45,21 +52,19 @@
                     if (currentValue <= data) {
                         donationData.innerHTML = `${currentValue}%`;
                         currentValue++;
-    
-                        if (currentValue > data) {
-                            clearInterval(interval);
-                        }
+                    } else {
+                        clearInterval(interval);
                     }
-                    if (currentValue <= data && !animationRunning) {
+    
+                    if (!animationRunning) {
                         animationRunning = true;
-                        const timeDelay = 100 / (totalPaths - 2) / 19.8; // Adjusted delay for path animation
+                        const timeDelay = 100 / (totalPaths - 2) / 19.8;
     
                         for (let i = totalPaths - 1; i >= 0 && count < pathsToAnimate; i--, count++) {
-                            paths[i].style.animationDelay = `${count * timeDelay}s`; // Control animation delay
-                            paths[i].classList.add('line');
+                            visibleSvgPaths[i].style.animationDelay = `${count * timeDelay}s`;
+                            visibleSvgPaths[i].classList.add('line');
                         }
                     }
                 }, 50);
-    
             });
     }, 100);

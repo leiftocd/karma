@@ -18,6 +18,9 @@ body{
 .pd-text{
     padding-left: 20px;
 }
+.mb{
+    display: none;
+}
 .mountain-container{
     position: relative;
     display: flex;
@@ -225,7 +228,6 @@ tr:nth-child(even) {
     color: #FFFFFF;
     font-size: 20px;
     font-weight: 700;
-    filter: drop-shadow(2px 4px 6px rgb(6, 79, 104));
 }
 .road1 {
     display: flex;
@@ -251,7 +253,6 @@ tr:nth-child(even) {
 
 @keyframes fillIn {
     to {
-        filter: contrast(120%);
         fill: #f5f5f5;
     }
 }
@@ -406,6 +407,12 @@ tr:nth-child(even) {
     }
 }
 @media (max-width: 450px) {
+    .pc{
+        display: none;
+    }
+    .mb{
+        display: block;
+    }
     .pd-text{
         padding-left: 10px;
     }
@@ -538,10 +545,6 @@ tr:nth-child(even) {
     }
     #container{
         margin-top: 35px;
-    }
-    .road1 svg{
-        preserveAspectRatio: "xMidYMid";
-
     }
 }
 @keyframes moveHeader {
