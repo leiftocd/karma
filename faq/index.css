@@ -438,13 +438,13 @@ footer {
     }
     #container .faq-container {
         max-width: 90%;
-        gap: 10px;
     }
     #container .faq-container h1 {
-        font-size: 36px !important;
+        font-size: 36px ;
+        margin-bottom: 0;
     }
     .faq-container_content .faq-box .faq-box_title h2{
-        font-size: 26px !important;
+        font-size: 26px;
     }
     .faq-box .faq-box_content .question {
         font-size: 18px;
@@ -514,10 +514,11 @@ footer {
     }
     .faq-container_content .faq-box .faq-box_title h2{
         padding-bottom: 20px;
-        font-size: 24px;
+        font-size: 22px !important;
     }
     #container .faq-container h1 {
-        font-size: 30px;
+        margin-bottom: 0;
+        font-size: 28px;
     }
     .faq-box .faq-box_content .question {
         font-size: 16px;
@@ -624,11 +625,11 @@ footer {
         margin-bottom: 0;
     }
     #container .faq-container h1 {
-        font-size: 22px;
+        font-size: 23px !important;
         margin-bottom: 0;
     }
     .faq-container_content .faq-box .faq-box_title h2{
-        font-size: 18px;
+        font-size: 18px !important;
     }
     .faq-box .faq-box_content .question {
         font-size: 14px;
