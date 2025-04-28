@@ -314,6 +314,9 @@ tr:nth-child(even) {
 .hidden{
     display: none;
 }
+#karma-content_cn ul li {
+    font-size: 16px;
+}
 @media (max-width: 1440px){
     #header {
         padding: 0 53px 0 72px;
