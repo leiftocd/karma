@@ -378,7 +378,7 @@ function setupDiagramButtons() {
                 // Apply fixed positioning styles
                 const fullscreenContent = fullscreenDiv.querySelector('.fullscreen-content');
                 fullscreenContent.style.position = 'fixed';
-                fullscreenContent.style.top = headerHeight + 'px'; // Bắt đầu từ dưới header
+                fullscreenContent.style.top = headerHeight + 'px';
                 fullscreenContent.style.bottom = '32px';
                 fullscreenContent.style.left = '0';
                 fullscreenContent.style.right = '0';
@@ -516,14 +516,12 @@ function setupCategoryNav() {
 
             console.log(`Nav clicked: targetClass=${targetClass}`); // Debug
 
-            // Đóng fullscreen diagram nếu mở
             const fullscreenDiv = document.querySelector('.fullscreen-diagram');
             if (fullscreenDiv) {
                 console.log('Closing fullscreen diagram');
                 closeDiagramFullscreen();
             }
 
-            // Reset trạng thái show more và hidden content
             document.querySelectorAll('.show-more-btn').forEach(button => {
                 button.classList.remove('expanded');
                 gsap.to(button.querySelector('svg'), {
@@ -546,7 +544,6 @@ function setupCategoryNav() {
                 });
             });
 
-            // Chuyển đổi box
             document.querySelectorAll('.faq-box').forEach(box => {
                 box.classList.remove('active');
             });
@@ -555,8 +552,7 @@ function setupCategoryNav() {
                 console.log(`Activating box: .faq-box.${targetClass}`);
                 targetBox.classList.add('active');
                 
-                // Chỉ cuộn trên desktop (width > 768px)
-                if (window.innerWidth > 768) {
+                if (window.innerWidth > 641) {
                     const headerHeight = document.querySelector('#header').offsetHeight || 0;
                     console.log(`Scrolling to box, headerHeight=${headerHeight}`);
                     window.scrollTo({
@@ -570,18 +566,15 @@ function setupCategoryNav() {
                 console.error(`Target box not found: .faq-box.${targetClass}`);
             }
             
-            // Cập nhật trạng thái active cho nav
             categoryItems.forEach(item => item.classList.remove('active'));
             this.parentElement.classList.add('active');
             
-            // Đóng menu
             const categoryNav = document.getElementById('category-nav');
             if (categoryNav) {
                 console.log('Closing category nav');
                 categoryNav.classList.remove('visible');
             }
             
-            // Re-init show more buttons
             console.log('Reinitializing show more buttons');
             reInitShowMoreButtons();
         });
