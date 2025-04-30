@@ -319,6 +319,17 @@ tr:nth-child(even) {
 .hidden{
     display: none;
 }
+@media (min-width: 1920px){
+    #header .logo{
+        width: 105px;
+    } 
+}
+@media (min-width: 1440px){
+    #header .logo{
+        width: 100px;
+        height: 80px;
+    } 
+}
 @media (max-width: 1440px){
     #header .nav .nav-language #lang-toggle{
         font-size: 20px;
@@ -356,6 +367,9 @@ tr:nth-child(even) {
     }
 }
 @media (max-width: 1200px) {
+    #header .logo {
+        width: 70px;
+    }
     main{
         padding-top: 42px;
     }
@@ -465,6 +479,9 @@ tr:nth-child(even) {
     }
 }
 @media (max-width: 768px) {
+    #header .logo{
+        width: 60px;
+    }
     .mountain-container{
         padding: 30px 0 0;
     }
@@ -541,7 +558,7 @@ tr:nth-child(even) {
         font-size: 14px;
     }
     #header .logo{
-        width: 55px;
+        width: 50px;
     }
     .mountain .road{
         left: 0%;
@@ -634,11 +651,11 @@ tr:nth-child(even) {
         font-size: 16px !important;
     }
     #header{
-        height: 55px;
+        height: 50px;
         padding: 0 20px 0 20px;
     }
     #header .logo{
-        width: 50px;
+        width: 40px;
         display: flex;
         align-items: center;
         padding-top: 0;
