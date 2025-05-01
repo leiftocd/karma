@@ -77,7 +77,7 @@ const faqData = [
       items: [
         {
             question: "How are newly minted tokens split?",
-            answer: " &#9679; 30 % to donors-rewarding the people who gave. <br> &#9679; 10 % to beneficiariesd-letting recipients hold a transparent record of support. <br> &#9679; 5 % to organizersd-covering the work of platforms or charities that coordinated the drive. <br> &#9679; 25 % to the core teamd-funding development, audits, operations, and outreach. <br> &#9679; 5 % to ecosystem developersd-grants and bounties for builders expanding Karma tooling. <br> &#9679; 15 % to the Charity Fundd-a community-governed treasury for future good-cause projects. <br> &#9679; 10 % to liquidity managementd-used later to create healthy on-chain markets.",
+            answer: " ● 30 % to donors-rewarding the people who gave. <br> ● 10 % to beneficiariesd-letting recipients hold a transparent record of support. <br> ● 5 % to organizersd-covering the work of platforms or charities that coordinated the drive. <br> ● 25 % to the core teamd-funding development, audits, operations, and outreach. <br> ● 5 % to ecosystem developersd-grants and bounties for builders expanding Karma tooling. <br> ● 15 % to the Charity Fundd-a community-governed treasury for future good-cause projects. <br> ● 10 % to liquidity managementd-used later to create healthy on-chain markets.",
             button: 'Click to see',
             diagram: "diag3.png"
         },
@@ -103,20 +103,23 @@ const faqData = [
         },
         {
             question: "How can I get involved?",
-            answer: "&#9679; Developers can apply for grants from the ecosystem pool to build tools, analytics, or integrations. <br> &#9679; Non-profits can request Charity Fund grants by submitting proposals for the weekly vote. <br> &#9679; Volunteers can earn Karma by auditing smart contracts, moderating communities, or helping with events"
+            answer: "● Developers can apply for grants from the ecosystem pool to build tools, analytics, or integrations. <br> ● Non-profits can request Charity Fund grants by submitting proposals for the weekly vote. <br> ● Volunteers can earn Karma by auditing smart contracts, moderating communities, or helping with events"
         },
         {
             question: "How do I track progress?",
             answer: "Every mint, fund movement, and governance vote is recorded on-chain for anyone to audit. The team also publishes concise public summaries after each verified donation event, so supporters can follow impact in real time."
         },
-        
       ]
     }
-  ];
-  function renderFAQSections() {
+];
+
+function renderFAQSections() {
     return faqData.map(section => {
-        const visibleItems = section.items.slice(0, 5);
-        const hiddenItems = section.items.slice(5);
+        // Xác định giới hạn hiển thị dựa trên kích thước màn hình
+        const isPC = window.innerWidth > 640;
+        const visibleLimit = isPC ? 5 : 7; // PC hiển thị 5, mobile hiển thị 7
+        const visibleItems = section.items.slice(0, visibleLimit);
+        const hiddenItems = section.items.slice(visibleLimit);
         
         const visibleItemsHTML = visibleItems.map((item, index) => `
             <div class="faq-box_content">
@@ -147,7 +150,7 @@ const faqData = [
             <div class="hidden-content" id="hidden-content-${section.id}">
                 ${hiddenItems.map((item, index) => `
                     <div class="faq-box_content">
-                        <div class="question no-select" role="button" tabindex="0" aria-expanded="false" aria-controls="answer-${section.id}-${index + 5}">
+                        <div class="question no-select" role="button" tabindex="0" aria-expanded="false" aria-controls="answer-${section.id}-${index + visibleLimit}">
                             ${item.question}
                             <div class="accordion">
                                 <div class="show-answer">
@@ -157,7 +160,7 @@ const faqData = [
                                 </div>
                             </div>
                         </div>
-                        <div class="answer" id="answer-${section.id}-${index + 5}" data-has-diagram="${item.diagram ? 'true' : 'false'}" data-diagram-path="${item.diagram || ''}">
+                        <div class="answer" id="answer-${section.id}-${index + visibleLimit}" data-has-diagram="${item.diagram ? 'true' : 'false'}" data-diagram-path="${item.diagram || ''}">
                             ${item.diagram ? 
                               `<div class="answer-text">${item.answer}</div>
                                <div class="diagram-container" style="display: none;">
@@ -369,9 +372,9 @@ function setupDiagramButtons() {
             const diagramContainer = answerDiv.querySelector('.diagram-container');
             
             // Hide the FAQ container content
-            const faqContainer = document.querySelector('#container');
+            const faqContainer = document.querySelector('#container-f');
             if (faqContainer) {
-                faqContainer.style.display = 'none'; // Ẩn #container
+                faqContainer.style.display = 'none';
             }
             
             // Store original position and state
@@ -481,7 +484,7 @@ function closeDiagramFullscreen() {
                 // Re-enable scrolling
                 document.body.style.overflow = '';
                 // Show the FAQ container content again
-                const faqContainer = document.querySelector('#container');
+                const faqContainer = document.querySelector('#container-f');
                 if (faqContainer) {
                     faqContainer.style.display = ''; 
                 }
@@ -531,7 +534,7 @@ function switchBox(boxId) {
 
 function setupCategoryNav() {
     const navLinks = document.querySelectorAll('.category-nav a');
-    const categoryItems = document.querySelectorAll('.category-nav div');
+    const categoryItems = document.querySelectorAll('.category-nav > div:not(.nav-language)');
     
     if (!navLinks.length || !categoryItems.length) {
         console.error('Category navigation links or items not found');
@@ -543,7 +546,7 @@ function setupCategoryNav() {
             event.preventDefault();
             const targetClass = this.getAttribute('data-target');
 
-            console.log(`Nav clicked: targetClass=${targetClass}`); // Debug
+            console.log(`Nav clicked: targetClass=${targetClass}`);
 
             const fullscreenDiv = document.querySelector('.fullscreen-diagram');
             if (fullscreenDiv) {
@@ -655,6 +658,9 @@ function setupMenuToggle() {
             navFaq && !navFaq.contains(event.target) && 
             !categoryNav.contains(event.target)) {
             categoryNav.classList.remove('visible');
+            if (langSubmenu && !langSubmenu.classList.contains('hidden')) {
+                langSubmenu.classList.add('hidden');
+            }
             if (navMenu) {
                 navMenu.setAttribute('aria-expanded', 'false');
             }
@@ -665,25 +671,15 @@ function setupMenuToggle() {
 function setupLanguageToggle() {
     const langToggle = document.getElementById('lang-toggle');
     const langSubmenu = document.getElementById('lang-submenu');
-    const categoryNav = document.getElementById('category-nav');
 
     if (!langToggle || !langSubmenu) {
         console.error('Language toggle or submenu not found');
         return;
     }
 
-    langToggle.addEventListener('click', function() {
-        if (categoryNav && categoryNav.classList.contains('visible')) {
-            categoryNav.classList.remove('visible');
-        }
-
+    langToggle.addEventListener('click', function(event) {
+        event.stopPropagation(); // Ngăn sự kiện click lan tỏa làm ẩn category-nav
         langSubmenu.classList.toggle('hidden');
-    });
-
-    document.addEventListener('click', function(event) {
-        if (!langToggle.contains(event.target) && !langSubmenu.contains(event.target)) {
-            langSubmenu.classList.add('hidden');
-        }
     });
 
     const langItems = document.querySelectorAll('.lang');
@@ -691,7 +687,7 @@ function setupLanguageToggle() {
         lang.addEventListener('click', function() {
             langItems.forEach(l => l.classList.remove('active'));
             this.classList.add('active');
-            langSubmenu.classList.add('hidden');
+            langSubmenu.classList.add('hidden'); // Ẩn submenu khi chọn ngôn ngữ
         });
 
         lang.addEventListener('keydown', function(event) {
@@ -701,15 +697,21 @@ function setupLanguageToggle() {
             }
         });
     });
+
+    // Không cần xử lý click ngoài để ẩn lang-submenu, vì đã xử lý trong setupMenuToggle
 }
 
 function setupCloseButton() {
     const closeButton = document.querySelector('.close-btn_nav');
     const categoryNav = document.getElementById('category-nav');
+    const langSubmenu = document.getElementById('lang-submenu');
     
     if (closeButton && categoryNav) {
         closeButton.addEventListener('click', function() {
             categoryNav.classList.remove('visible');
+            if (langSubmenu && !langSubmenu.classList.contains('hidden')) {
+                langSubmenu.classList.add('hidden');
+            }
         });
         
         closeButton.setAttribute('tabindex', '0');
@@ -720,10 +722,14 @@ function setupCloseButton() {
             if (event.key === 'Enter' || event.key === ' ') {
                 event.preventDefault();
                 categoryNav.classList.remove('visible');
+                if (langSubmenu && !langSubmenu.classList.contains('hidden')) {
+                    langSubmenu.classList.add('hidden');
+                }
             }
         });
     }
 }
+
 document.addEventListener('DOMContentLoaded', function() {
     const container = document.querySelector('.faq-container_content');
     if (container) {
