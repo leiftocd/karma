@@ -25,16 +25,14 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* height: 100%;
-    min-height: 100vh; */
     width: 100%;
-
-    padding-top: 52px;
+    padding-top: 0;
     z-index: 100000;
     overflow: hidden;
 }
 #header {
     position: fixed !important;
+    margin-top: 52px;
 }
 #header .logo a{
     cursor: pointer;
@@ -52,7 +50,7 @@ main{
     justify-content: center;
 }
 #container {
-    margin: 78px 0 0 !important;
+    margin: 130px 0 0 !important;
     display: flex;
     width: 100%;
     position: relative;
@@ -268,7 +266,7 @@ main{
     visibility: visible;
     display: flex !important;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
 }
 .faq-box .faq-box_content .accordion {
     position: absolute;
@@ -331,6 +329,12 @@ main{
     overflow: auto;
     display: flex;
     flex-direction: column;
+}
+.diagram-btn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .question-display {
@@ -638,10 +642,7 @@ main{
         width: 14px;
         height: 14px;
     }
-    .faq-box .faq-box_content .answer.active{
-        padding-top: 10px !important;
-        padding-bottom: 10px !important;
-    }
+
     .category-nav .close-btn_nav {
         display: block; 
     }

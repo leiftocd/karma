@@ -8,6 +8,10 @@ const faqData = [
           answer: "Karma is a non-financial digital token whose only purpose is to acknowledge charitable acts. It is never marketed as an investment or used for speculationd-think of it as a permanent, blockchain-based “thank-you note.”"
         },
         {
+            question: "What is the Karma Wallet?",
+            answer: "A self-custody app that lets users store Karma, chat with other participants, convert crypto to fiat after KYC, and spend via virtual or physical debit cardsd-all while displaying donation proofs and reputation updates."
+          },
+        {
           question: "Why base minting on donations?",
           answer: "Real-world donations are transparent, measurable, and verifiable. Tying every token to a documented act of giving anchors the project in genuine goodwill and removes any “pay-to-mint” dynamic."
         },
@@ -17,6 +21,18 @@ const faqData = [
           button: 'Click to see',
           diagram: "diag1.png"
         },
+        {
+            question: "Once an event is in the candidate list?",
+            answer: "Karma Today will conduct research on the proof method to verify the completeness of the event (in future)."
+          },
+          {
+            question: "On chain donation?",
+            answer: "If yes, Recipient wallet declaration & donator wallet declaration with proof method transaction hash."
+          },
+          {
+            question: "What tools are recommended for implementing event sourcing?",
+            answer: "If no, proof method: karma agent on spot <br> If yes, proof method: provided by organizer."
+          },
       ]
     },
     {
@@ -36,6 +52,22 @@ const faqData = [
           {
             question: "How are large donations handled?",
             answer: "If one donation exceeds the remaining space in the current batch, the overflow is priced in the next batch. Every token thus reflects the correct batch rate, and no donor jumps the queue."
+          },
+          {
+            question: "Once the event is completed?",
+            answer: "Karma Today calculates the number of tokens to be minted based on the donation value (in USD) and the Karma token minting curve."
+          },
+          {
+            question: "Proof method Karma agent on spot & Provided by organizer?",
+            answer: "Record the event and donation."
+          },
+          {
+            question: "Proof method transaction?",
+            answer: "Hash record the transaction and proof complete."
+          },
+          {
+            question: "Record the event?",
+            answer: "If donate in cash yes, proof complete. <br> If no, Wait for transfer receipt"
           },
       ]
     },
@@ -68,10 +100,6 @@ const faqData = [
         {
           question: "What is the reputation system?",
           answer: "A forthcoming on-chain score that tracks lifetime Karma earned, governance participation, and verified volunteer workd-providing a non-financial “social credit” signal for individuals and organizations"
-        },
-        {
-          question: "What is the Karma Wallet?",
-          answer: "A self-custody app that lets users store Karma, chat with other participants, convert crypto to fiat after KYC, and spend via virtual or physical debit cardsd-all while displaying donation proofs and reputation updates."
         },
         {
             question: "How can I get involved?",
@@ -108,7 +136,8 @@ const faqData = [
                        <div class="diagram-container" style="display: none;">
                          <img src="../image/faq/${item.diagram}" alt="${item.question} diagram" class="diagram-image">
                        </div>
-                       <button class="diagram-button">${item.button}</button>` 
+                       <div class="diagram-btn"><button class="diagram-button">${item.button}</button></div>
+                       ` 
                       : item.answer}
                 </div>
             </div>
