@@ -115,9 +115,8 @@ const faqData = [
 
 function renderFAQSections() {
     return faqData.map(section => {
-        // Xác định giới hạn hiển thị dựa trên kích thước màn hình
         const isPC = window.innerWidth > 640;
-        const visibleLimit = isPC ? 5 : 8; // PC hiển thị 5, mobile hiển thị 7
+        const visibleLimit = isPC ? 5 : 8; 
         const visibleItems = section.items.slice(0, visibleLimit);
         const hiddenItems = section.items.slice(visibleLimit);
         
@@ -718,7 +717,6 @@ function setupLanguageToggle() {
         });
     });
 
-    // Không cần xử lý click ngoài để ẩn lang-submenu, vì đã xử lý trong setupMenuToggle
 }
 
 function setupCloseButton() {
