@@ -206,8 +206,7 @@ tr:nth-child(even) {
 #header .nav .nav-language #lang-submenu .lang.active{
     text-decoration: underline;
     text-align: center;
-    color: #fff;
-    padding: 0 15px !important;
+    color: #000;
 }
 #header .nav .nav-language #lang-toggle{
     display: flex;
