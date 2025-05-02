@@ -79,6 +79,7 @@ main{
 }
 .is-fixed{
     position: fixed !important;
+    display: none !important;
 }
 .show-more-btn {
     display: flex;
@@ -691,20 +692,18 @@ main{
     #header .nav .nav-language #lang-submenu .lang:hover,
     #header .nav .nav-language #lang-submenu .lang.active{
         text-decoration: underline;
+        text-align: center;
         color: #fff;
         padding: 0 15px !important;
 }
     #header .nav .nav-language #lang-submenu{
         background: unset !important;
+        text-align: center;
         left: 50%;
         transform: translateX(-50%);
     }
     #header .nav .nav-language #lang-toggle{
         justify-content: center !important;
-        padding-left: 10px !important;
-    }
-    #header .nav .nav-language #lang-toggle:hover{
-        color: #ccc !important;
     }
     #header .nav .nav-language{
         padding: 0 !important;
@@ -726,7 +725,7 @@ main{
     }
     .fullscreen-content {
         max-width: 90% !important;
-        inset:  35px 0 0 0 !important;
+        inset:  35px 0 !important;
         height: 80vh;
         z-index: 99997 !important;
     }
@@ -843,6 +842,9 @@ main{
 }
 
 @media (max-width: 450px) {
+    .fullscreen-content {
+        inset:  35px 0 0 !important;
+    }
     #header .nav .nav-language #lang-submenu{
         gap: 8px !important;
     }
@@ -905,7 +907,7 @@ main{
     }
     .fullscreen-content {
         max-width: 95% !important;
-        height: 85vh;
+        height: 90vh;
     }
     .diagram-display {
         padding: 10px 15px;
@@ -913,4 +915,5 @@ main{
     .fullscreen-diagram{
         padding: 45px 0 15px !important;
     }
+
 }
