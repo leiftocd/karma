@@ -33,6 +33,7 @@ main{
     position: relative ;
     margin-top: 52px;
     z-index: 99999;
+    height: unset !important;
 }
 #header .logo a{
     cursor: pointer;
@@ -524,7 +525,7 @@ main{
     }
     .fullscreen-content {
         max-width: 70% !important;
-        inset:  52px 0 0 0 !important;
+        inset:  100px 0 0 0 !important;
     }
     #header {
         padding: 0 32px !important;
@@ -677,6 +678,9 @@ main{
 }
 
 @media (max-width: 640px) {
+    .is-fixed{
+        position: relative !important;
+    }
     #header .nav .nav-faq{
         padding-bottom: 30px;
     }
@@ -829,6 +833,7 @@ main{
     }
     .fullscreen-diagram{
         z-index: 10001;
+        padding: 35px 0 15px !important;
     }
      main{
         min-height: 100vh !important;
@@ -904,5 +909,8 @@ main{
     }
     .diagram-display {
         padding: 10px 15px;
+    }
+    .fullscreen-diagram{
+        padding: 45px 0 15px !important;
     }
 }
